@@ -5,7 +5,7 @@ This modules deploys and configures a NAT instance on a public subnet of an AWS 
 ## Module input parameters
 
 | Parameter                  | Description                                                              |
-| --------------------- ---- | ------------------------------------------------------------------------ |
+| -------------------------- | ------------------------------------------------------------------------ |
 | vpc_id                     | The id of the VPC at which the NAT instance will be installed            |
 | vpc_private_subnet_cidrs   | A list of all private subnets cidrs within the vcp                       |
 | vpc_private_route_table_id | The id of the route table associated with the private subnets of the VPC |
