@@ -10,7 +10,7 @@ This modules deploys and configures a NAT instance on a public subnet of an AWS 
 | vpc_private_subnet_cidrs   | A list of all private subnets cidrs within the vcp                       |
 | vpc_private_route_table_id | The id of the route table associated with the private subnets of the VPC |
 | nat_instance_key_name      | The name of the ssh key of the NAT instance                              |
-| nat_instance_key_path      | The path to the file containing the public ssh for the NAT instance      |
+| nat_instance_key_path      | The path to the file containing the public ssh key for the NAT instance  |
 | nat_instance_type          | The instance type of the NAT instance                                    |
 | nat_instance_subnet_id     | The id of the public subnet on which the NAT instance will be deployed   |
 
