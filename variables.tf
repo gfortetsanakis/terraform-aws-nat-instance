@@ -19,7 +19,7 @@ variable "nat_instance_key_name" {
 }
 
 variable "nat_instance_key_path" {
-  description = "The path to the file containing the public ssh for the NAT instance."
+  description = "The path to the file containing the public ssh key for the NAT instance."
 }
 
 variable "nat_instance_type" {
