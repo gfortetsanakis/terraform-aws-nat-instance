@@ -13,8 +13,8 @@ This modules deploys and configures a NAT instance on a public subnet of an AWS 
 | nat_instance_key_path       | Required | The path to the file containing the public ssh key for the NAT instance               |
 | nat_instance_type           | Required | The instance type of the NAT instance                                                 |
 | nat_instance_subnet_id      | Required | The id of the public subnet on which the NAT instance will be deployed                |
-| ssh_allowed_security_groups | Required | A list of security groups that will be allowed to connect to the NAT instance via ssh |
-| ssh_allowed_cidr_blocks     | Required | A list of CIDR blocks that will be allowed to connect to the NAT instance via ssh     |
+| ssh_allowed_security_groups | Optional | A list of security groups that will be allowed to connect to the NAT instance via ssh |
+| ssh_allowed_cidr_blocks     | Optional | A list of CIDR blocks that will be allowed to connect to the NAT instance via ssh     |
 
 ## Module output parameters
 
