@@ -37,6 +37,32 @@ resource "aws_security_group" "nat_instance_sg" {
       cidr_blocks = egress.value.cidr_blocks
     }
   }
+
+  dynamic "ingress" {
+    for_each = [
+      for rule in local.nat_instance_sg["optional_ingress"] : rule
+      if length(rule["security_groups"]) != 0
+    ]
+    content {
+      from_port       = ingress.value.from
+      to_port         = ingress.value.to
+      protocol        = ingress.value.protocol
+      security_groups = ingress.value.security_groups
+    }
+  }
+
+  dynamic "ingress" {
+    for_each = [
+      for rule in local.nat_instance_sg["optional_ingress"] : rule
+      if length(rule["cidr_blocks"]) != 0
+    ]
+    content {
+      from_port   = ingress.value.from
+      to_port     = ingress.value.to
+      protocol    = ingress.value.protocol
+      cidr_blocks = ingress.value.cidr_blocks
+    }
+  }
 }
 
 resource "aws_instance" "nat_instance" {

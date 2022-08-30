@@ -25,3 +25,13 @@ variable "nat_instance_key_path" {
 variable "nat_instance_type" {
   description = "The instance type of the NAT instance."
 }
+
+variable "ssh_allowed_security_groups" {
+  description = "An optional list of security groups that will be allowed to connect to the NAT instance via ssh ."
+  default     = []
+}
+
+variable "ssh_allowed_cidr_blocks" {
+  description = "An optional list of CIDR blocks that will be allowed to connect to the NAT instance via ssh."
+  default     = []
+}

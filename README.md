@@ -4,15 +4,17 @@ This modules deploys and configures a NAT instance on a public subnet of an AWS 
 
 ## Module input parameters
 
-| Parameter                  | Description                                                              |
-| -------------------------- | ------------------------------------------------------------------------ |
-| vpc_id                     | The id of the VPC at which the NAT instance will be installed            |
-| vpc_private_subnet_cidrs   | A list of all private subnets cidrs within the vcp                       |
-| vpc_private_route_table_id | The id of the route table associated with the private subnets of the VPC |
-| nat_instance_key_name      | The name of the ssh key of the NAT instance                              |
-| nat_instance_key_path      | The path to the file containing the public ssh key for the NAT instance  |
-| nat_instance_type          | The instance type of the NAT instance                                    |
-| nat_instance_subnet_id     | The id of the public subnet on which the NAT instance will be deployed   |
+| Parameter                   | Type     | Description                                                                           |
+| --------------------------- |--------- | ------------------------------------------------------------------------------------- |
+| vpc_id                      | Required | The id of the VPC at which the NAT instance will be installed                         |
+| vpc_private_subnet_cidrs    | Required | A list of all private subnets cidrs within the vcp                                    |
+| vpc_private_route_table_id  | Required | The id of the route table associated with the private subnets of the VPC              |
+| nat_instance_key_name       | Required | The name of the ssh key of the NAT instance                                           |
+| nat_instance_key_path       | Required | The path to the file containing the public ssh key for the NAT instance               |
+| nat_instance_type           | Required | The instance type of the NAT instance                                                 |
+| nat_instance_subnet_id      | Required | The id of the public subnet on which the NAT instance will be deployed                |
+| ssh_allowed_security_groups | Required | A list of security groups that will be allowed to connect to the NAT instance via ssh |
+| ssh_allowed_cidr_blocks     | Required | A list of CIDR blocks that will be allowed to connect to the NAT instance via ssh     |
 
 ## Module output parameters
 

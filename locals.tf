@@ -30,5 +30,14 @@ locals {
         cidr_blocks = ["0.0.0.0/0"]
       }
     }
+    optional_ingress = {
+      ssh = {
+        from            = 22
+        to              = 22
+        protocol        = "tcp"
+        security_groups = var.ssh_allowed_security_groups
+        cidr_blocks     = var.ssh_allowed_cidr_blocks
+      }
+    }
   }
 }
