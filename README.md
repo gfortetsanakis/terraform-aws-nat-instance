@@ -1,6 +1,6 @@
 # Terraform module for NAT intance
 
-This modules deploys and configures a NAT instance on a public subnet of an AWS VPC. It also modifies the route table associated the private subnets of the VPC to forward all Internet traffic to the NAT instance. That way EC2 instances deployed on private subnets will be able to download packages and updates from the Internet.
+This modules deploys and configures a NAT instance on a public subnet of an AWS VPC. It also modifies the route table associated with the private subnets of the VPC to forward all Internet traffic to the NAT instance. That way EC2 instances deployed on private subnets will be able to download packages and updates from the Internet.
 
 ## Module input parameters
 
