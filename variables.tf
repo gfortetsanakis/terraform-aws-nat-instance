@@ -14,10 +14,6 @@ variable "nat_instance_subnet_id" {
   description = "The id of the public subnet on which the NAT instance will be deployed."
 }
 
-variable "nat_instance_key_name" {
-  description = "The name of the ssh key of the NAT instance."
-}
-
 variable "nat_instance_key_path" {
   description = "The path to the file containing the public ssh key for the NAT instance."
 }
