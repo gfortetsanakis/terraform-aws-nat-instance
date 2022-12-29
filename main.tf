@@ -10,7 +10,7 @@ data "aws_ami" "nat_instance_ami" {
 
 resource "aws_key_pair" "nat_instance_key" {
   key_name   = "nat-instance-server-key"
-  public_key = file(var.nat_instance_key_path)
+  public_key = var.nat_instance_key
 }
 
 resource "aws_security_group" "nat_instance_sg" {
